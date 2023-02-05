@@ -1,0 +1,10 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "paths": {
+      "android-edge-to-edge": ["../src/index"],
+      "android-edge-to-edge/*": ["../src/*"]
+    }
+  }
+}
