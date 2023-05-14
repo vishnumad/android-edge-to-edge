@@ -7,7 +7,7 @@ import expo.modules.core.interfaces.ReactActivityLifecycleListener
 class EdgeToEdgePackage : BasePackage() {
     override fun createReactActivityLifecycleListeners(
         activityContext: Context?
-    ): MutableList<ReactActivityLifecycleListener> {
-        return mutableListOf(EdgeToEdgeLifecycleListener())
+    ): List<ReactActivityLifecycleListener> {
+        return listOf(EdgeToEdgeLifecycleListener())
     }
 }

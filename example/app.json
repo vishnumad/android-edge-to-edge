@@ -26,6 +26,9 @@
     },
     "androidStatusbar": {
       "barStyle": "light-content"
+    },
+    "ios": {
+      "bundleIdentifier": "expo.modules.edgetoedge.example"
     }
   }
 }

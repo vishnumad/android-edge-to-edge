@@ -7,22 +7,20 @@
     "ios": "expo run:ios"
   },
   "dependencies": {
-    "expo": "~47.0.6",
-    "expo-linear-gradient": "~12.0.1",
-    "expo-navigation-bar": "~2.0.1",
-    "expo-splash-screen": "~0.17.5",
-    "expo-status-bar": "~1.4.2",
-    "expo-system-ui": "^2.0.1",
-    "react": "18.1.0",
-    "react-dom": "18.1.0",
-    "react-native": "0.70.5",
-    "react-native-web": "~0.18.9"
+    "expo": "~48.0.15",
+    "expo-linear-gradient": "~12.1.2",
+    "expo-navigation-bar": "~2.1.1",
+    "expo-splash-screen": "~0.18.2",
+    "expo-status-bar": "~1.4.4",
+    "expo-system-ui": "^2.2.1",
+    "react": "18.2.0",
+    "react-native": "0.71.7"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.9",
-    "@types/react": "~18.0.14",
-    "@types/react-native": "~0.70.6",
-    "typescript": "^4.6.3"
+    "@babel/core": "^7.21.8",
+    "@types/react": "~18.2.6",
+    "@types/react-native": "~0.72.0",
+    "typescript": "^5.0.4"
   },
   "private": true,
   "expo": {
