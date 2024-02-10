@@ -16,6 +16,7 @@
 
 package expo.modules.edgetoedge
 
+import android.app.Activity
 import android.content.res.Configuration
 import android.content.res.Resources
 import android.os.Build
@@ -23,7 +24,6 @@ import android.view.View
 import android.view.Window
 import android.view.WindowManager
 import androidx.annotation.RequiresApi
-import androidx.core.app.ComponentActivity
 import androidx.core.content.res.ResourcesCompat
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsControllerCompat
@@ -39,11 +39,10 @@ import androidx.core.view.WindowInsetsControllerCompat
  *     }
  * ```
  */
-fun ComponentActivity.setUpEdgeToEdge() {
+fun Activity.setUpEdgeToEdge() {
     val edgeToEdge = when {
         Build.VERSION.SDK_INT >= 29 -> EdgeToEdgeApi29()
-        Build.VERSION.SDK_INT >= 23 -> EdgeToEdgeApi23()
-        else -> EdgeToEdgeApi21()
+        else -> EdgeToEdgeApi23()
     }
 
     edgeToEdge.setUp(window, findViewById(android.R.id.content), theme)
@@ -60,7 +59,6 @@ private interface EdgeToEdgeImpl {
 
 @RequiresApi(29)
 private class EdgeToEdgeApi29 : EdgeToEdgeImpl {
-
     override fun setUp(window: Window, view: View, theme: Resources.Theme) {
         WindowCompat.setDecorFitsSystemWindows(window, false)
         val resources = view.resources
@@ -74,9 +72,7 @@ private class EdgeToEdgeApi29 : EdgeToEdgeImpl {
     }
 }
 
-@RequiresApi(23)
 private class EdgeToEdgeApi23 : EdgeToEdgeImpl {
-
     override fun setUp(window: Window, view: View, theme: Resources.Theme) {
         WindowCompat.setDecorFitsSystemWindows(window, false)
         val resources = view.resources
@@ -84,17 +80,6 @@ private class EdgeToEdgeApi23 : EdgeToEdgeImpl {
         window.statusBarColor = transparent
         val controller = WindowInsetsControllerCompat(window, view)
         controller.isAppearanceLightStatusBars = true
-        @Suppress("DEPRECATION")
-        window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION)
-    }
-}
-
-private class EdgeToEdgeApi21 : EdgeToEdgeImpl {
-
-    override fun setUp(window: Window, view: View, theme: Resources.Theme) {
-        WindowCompat.setDecorFitsSystemWindows(window, false)
-        @Suppress("DEPRECATION")
-        window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
         @Suppress("DEPRECATION")
         window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION)
     }
