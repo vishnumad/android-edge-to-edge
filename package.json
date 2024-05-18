@@ -21,10 +21,10 @@
   "homepage": "https://github.com/vishnumad/android-edge-to-edge#readme",
   "dependencies": {},
   "devDependencies": {
-    "@types/react": "^18.2.55",
+    "@types/react": "~18.2.79",
     "@types/react-native": "^0.73.0",
-    "expo-module-scripts": "^3.4.1",
-    "expo-modules-core": "^1.11.8"
+    "expo-module-scripts": "^3.5.1",
+    "expo-modules-core": "^1.12.11"
   },
   "peerDependencies": {
     "expo": "*",
