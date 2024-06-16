@@ -3,11 +3,13 @@
 An Expo native module that lays out Android apps [edge to edge](https://developer.android.com/develop/ui/views/layout/edge-to-edge)
 
 
-## Installation
+## Installation & Usage
 
 ```sh
 npm i android-edge-to-edge
 ```
+
+Rebuild the app to pick up the native module changes and the app should start up in edge to edge mode
 
 **Note:** For bare React Native projects, add Expo modules support to your app - [Expo Docs](https://docs.expo.dev/bare/installing-expo-modules/)
 
